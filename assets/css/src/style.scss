@@ -303,6 +303,75 @@ body {
     }
   }
 
+  &[data-background=good-vibes] {
+    #page {
+      background: $teal;
+
+      .header {
+        a {
+          color: $white!important;
+
+          &:hover {
+            color: $white!important;
+          }
+        }
+      }
+
+      main {
+        color: $white;
+
+        a {
+          color: $white;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-background=good-press] {
+    #page {
+      background: $grey-light;
+
+      .header {
+        a {
+          color: $white!important;
+
+          &:hover {
+            color: $white!important;
+          }
+        }
+      }
+
+      main {
+        color: $white;
+
+        a {
+          color: $white;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-background=starter-package] {
+    #page {
+
+      .header {
+        .logo {
+          .st0 {
+            fill: $grey;
+          }
+        }
+      }
+    }
+  }
+
   &.noScroll {
     overflow: hidden;
   }
@@ -437,12 +506,16 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000000;
   backdrop-filter: blur(4px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 800ms ease;
   background: rgba(0,0,0,.2);
+
+  a {
+    color: $grey-light!important;
+  }
 
   &.show {
     pointer-events: all;
@@ -505,7 +578,7 @@ small {
 
 .header {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0px;
   left: 0px;
 
@@ -667,12 +740,6 @@ main {
 
   .good-deals {
 
-    button {
-      background: white;
-      border-radius: 20px;
-      padding: .4vw 4vw;
-    }
-
     .banner {
       position: relative;
       padding: 0 8vw;
@@ -706,6 +773,13 @@ main {
         position: absolute;
         bottom: 0px;
         left: 0px;
+
+        a {
+          background: white;
+          border-radius: 20px;
+          padding: .4vw 4vw;
+          display: inline-block;
+        }
       }
     }
   }
@@ -749,9 +823,80 @@ main {
     }
   }
 
+  .modal-content {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000000;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 800ms ease;
+    background: rgba(0,0,0,.2);
+    overflow: scroll;
+
+    a {
+      color: $grey-light;
+    }
+
+    &.show {
+      pointer-events: all;
+      opacity: 1;
+    }
+
+    .panel {
+      background: white;
+      border-radius: 16px;
+      width: 520px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 3px -3px 8px rgba(0,0,0,.05);
+      margin: 8vh auto;
+      padding-bottom: 4vw;
+
+      a {
+        border-bottom: 1px solid $grey;
+      }
+
+      h3, p {
+        padding: 2vw;
+        padding-bottom: 0px;
+      }
+
+      .close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 10;
+
+        p {
+          padding: 2vw;
+        }
+      }
+    }
+  }
+
   .good-vibes {
     position: relative;
     z-index: 100;
+
+    .view {
+      position: absolute;
+      top: 4vw;
+      right: 0px;
+      z-index: 10;
+
+      a {
+        border-radius: 20px;
+        padding: .4vw 2vw;
+        display: inline-block;
+        border: 1px solid $grey-light;
+        color: $grey-light!important;
+        font-size: .9em;
+      }
+    }
 
     h3 {
       padding-right: 40vw;
@@ -767,8 +912,9 @@ main {
         padding: 1vw;
         padding-bottom: 0px;
 
-        a {
+        button {
           display: block;
+          width: 100%;
 
           &:hover {
             figure {
@@ -804,12 +950,33 @@ main {
             color: $grey-light;
           }
         }
+
+        .vibe-content {
+          display: none;
+        }
       }
     }
   }
 
   .good-press {
     padding-bottom: 10vw;
+    position: relative;
+
+    .view {
+      position: absolute;
+      top: 4vw;
+      right: 0px;
+      z-index: 10;
+
+      a {
+        border-radius: 20px;
+        padding: .4vw 2vw;
+        display: inline-block;
+        border: 1px solid $grey-light;
+        color: $grey-light!important;
+        font-size: .9em;
+      }
+    }
 
     h3 {
       padding-right: 40vw;
@@ -1002,7 +1169,7 @@ main {
   }
 
   main {
-    padding: 30vh 0;
+    padding: 24vh 0;
 
     h2{
       padding-right: 50vw;
@@ -1017,6 +1184,96 @@ main {
     p, ul {
       padding-top: 0px;
     }
+  }
+}
+
+.starter-package {
+
+  main {
+
+    .hero {
+      padding: 8vw;
+      padding-right: 30vw;
+      padding-bottom: 4vw;
+      padding-left: 12vw;
+    }
+
+    a {
+      display: inline-block;
+      border-bottom: 1px solid $grey;
+    }
+
+    h2, h3, p {
+      padding-bottom: 0px;
+      padding-top: 2vw;
+    }
+
+    h1 {
+      padding-top: 0px;
+    }
+
+    .content {
+      padding-bottom: 12vh;
+    }
+
+    .flexer {
+      display: flex;
+      flex-wrap: wrap;
+
+      .flexed {
+
+        &.email {
+          flex: 4;
+
+          p {
+            padding-top: 0px;
+          }
+        }
+
+        &.copy {
+          flex: 6;
+          padding-right: 4vw;
+        }
+      }
+    }
+  }
+}
+
+.post-type-archive-good_vibes {
+
+  footer {
+    display: none;
+  }
+
+  h1 {
+    padding: 0px;
+    color: white;
+  }
+
+  .coming-soon {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.post-type-archive-good_press {
+
+  footer {
+    display: none;
+  }
+
+  h1 {
+    padding: 0px;
+    color: white;
+  }
+
+  .coming-soon {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

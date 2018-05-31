@@ -11,10 +11,10 @@
 								<li><a href="mailto:hello@thegoodprcompany.com">hello@thegoodprcompany.com</a></li>
 							</ul>
 							<ul>
-								<li><a href="">Facebook</a></li>
-								<li><a href="">Twitter</a></li>
-								<li><a href="">Instagram</a></li>
-								<li><a href="">LinkedIn</a></li>
+								<li><a href="https://www.facebook.com/goodprco/" target="_blank">Facebook</a></li>
+								<li><a href="https://twitter.com/goodprco/" target="_blank">Twitter</a></li>
+								<li><a href="https://www.instagram.com/goodprco/" target="_blank">Instagram</a></li>
+								<li><a href="https://www.linkedin.com/goodprco/" target="_blank">LinkedIn</a></li>
 							</ul>
 						</div>
 						<div class="flex">
@@ -24,6 +24,7 @@
 								<li><a href="<?php echo site_url( '/about', 'http' ); ?>">About</li>
 								<li><a href="<?php echo site_url( '/contact', 'http' ); ?>">Contact</li>
 								<li><a href="<?php echo site_url( '/good-vibes', 'http' ); ?>">Good Vibes</li>
+									<li><a href="<?php echo site_url( '/good-press', 'http' ); ?>">Good Press</li>
 							</ul>
 						</div>
 					</section>

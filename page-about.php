@@ -113,7 +113,7 @@
 						<span class="set-back">From there to here, and here to there, funny things are everywhere.” — Dr. Seuss</span>
 					</p>
 					<p>
-						<span class="set-back">It’s impossible to survive the world of PR, let alone life, without keeping our wits about us. We believe that life is funny. We hope you do too.</span>
+						<span class="set-back">It's impossible to survive the world of PR, let alone life without comedic relief. We believe that life is funny. We hope you do too.</span>
 					</p>
 				</div>
 			</div>
@@ -159,30 +159,7 @@
 			});
 
 			var init = function() {
-				var flky = new Flickity( '.flky', {
-					accessibility: true,
-					adaptiveHeight: false,
-					autoPlay: false,
-					cellAlign: 'center',
-					cellSelector: undefined,
-					contain: false,
-					draggable: true,
-					dragThreshold: 3,
-					freeScroll: false,
-					selectedAttraction: 0.1,
-					friction: 1,
-					groupCells: false,
-					initialIndex: 2,
-					lazyLoad: false,
-					percentPosition: true,
-					prevNextButtons: false,
-					pageDots: true,
-					resize: true,
-					rightToLeft: false,
-					setGallerySize: true,
-					watchCSS: false,
-					wrapAround: true
-				});
+
 			};
 
 		});

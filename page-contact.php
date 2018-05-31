@@ -9,10 +9,10 @@
 			</h3>
 			<p class="ul"><a href="mailto:hello@thegoodprcompany.com">hello@thegoodprcompany.com</a></p>
 			<ul class="ul social">
-				<li><a href="">Facebook</a></li>
-				<li><a href="">Twitter</a></li>
-				<li><a href="">Instagram</a></li>
-				<li><a href="">LinkedIn</a></li>
+				<li><a href="https://www.facebook.com/goodprco/" target="_blank">Facebook</a></li>
+				<li><a href="https://twitter.com/goodprco/" target="_blank">Twitter</a></li>
+				<li><a href="https://www.instagram.com/goodprco/" target="_blank">Instagram</a></li>
+				<li><a href="https://www.linkedin.com/goodprco/" target="_blank">LinkedIn</a></li>
 			</ul>
 			<p>We are located in Seattle, WA.</p>
 		</main>
