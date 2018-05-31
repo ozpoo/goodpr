@@ -9,7 +9,6 @@
 		});
 
 		$(window).load(function() {
-			setListeners();
 			setBackground();
 			init();
 			animate();
@@ -85,6 +84,7 @@
 		  //       });
 		  //   });
 			// }
+			setListeners();
 		};
 
 		var setBackground = function() {
@@ -163,6 +163,14 @@
 				}
 			}
 			$lastScrollTop = $scrollTop;
+
+			if($("body").attr("data-background") == "home") {
+				if($scrollTop > $(window).height()) {
+					$(".header").addClass("flip");
+				} else {
+					$(".header").removeClass("flip");
+				}
+			}
 		};
 
 		var getDirection = function() {
@@ -222,9 +230,8 @@
 					watchCSS: false,
 					wrapAround: true
 				});
-
-				AOS.init();
 			}
+			AOS.init();
 		};
 
 		var setMenuTransform = function(direction) {

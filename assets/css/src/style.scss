@@ -582,6 +582,24 @@ small {
   top: 0px;
   left: 0px;
 
+  &.flip {
+
+    .logo {
+
+      .st0 {
+        fill: $grey;
+      }
+    }
+
+    a {
+      color: $grey!important;
+
+      &:hover {
+        color: $grey!important;
+      }
+    }
+  }
+
   .logo {
     position: fixed;
     top: 0px;
@@ -702,7 +720,7 @@ main {
   .hero {
     position: relative;
     height: 100vh;
-    min-height: 620px;
+    min-height: 420px;
     background: $coral;
     color: $white;
 
@@ -813,6 +831,7 @@ main {
 
         .toggle {
           padding-left: 1vw;
+          display: none;
 
           svg {
             width: calc(22px + .4vw);
