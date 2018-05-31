@@ -198,7 +198,7 @@ $coral: rgb(255,89,90);
 $teal: rgb(88,222,185);
 $font-copy: 'Apercu Pro', Sans-Serif;
 $font-header: 'Saveur Sans Round', Sans-Serif;
-$font-mono: 'Apercu Mono', monospace;
+$font-mono: 'Apercu Pro Mono', monospace;
 
 * {
 	font-smoothing: antialiased;
@@ -223,7 +223,7 @@ body {
 	font-size: 24px;
   font-size: calc(10px + .4vw);
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: normal;
   color: $grey;
 
   a {
@@ -423,13 +423,13 @@ h1 {
 h2 {
   font-size: 2em;
   line-height: 1.12;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 h3 {
   font-size: 1.6em;
   line-height: 1.2;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 h4 {

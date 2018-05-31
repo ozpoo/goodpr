@@ -48,15 +48,10 @@ function conditional_scripts(){
 }
 
 function styles() {
-  // wp_register_style('Space Mono',
-  //   get_template_directory_uri() . '/assets/font/Space Mono/stylesheet.css?v='.time(),
-  //   array(), '1.0', 'all');
-  // wp_enqueue_style('Space Mono');
-
-  // wp_register_style('Maison Neue',
-  //   get_template_directory_uri() . '/assets/font/Maison Neue/stylesheet.css?v='.time(),
-  //   array(), '1.0', 'all');
-  // wp_enqueue_style('Maison Neue');
+  wp_register_style('fonts',
+    get_template_directory_uri() . '/assets/font/fonts/stylesheet.css?v='.time(),
+    array(), '1.0', 'all');
+  wp_enqueue_style('fonts');
 
   wp_register_style('aos',
     get_template_directory_uri() . '/assets/js/_lib/aos/aos.css?v='.time(),
