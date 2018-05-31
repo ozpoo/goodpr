@@ -527,6 +527,7 @@ small {
     border-radius: 16px;
     height: 240px;
     width: 520px;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
@@ -1337,8 +1338,80 @@ footer {
   filter: blur(0);
 }
 
-@media only screen and (max-width: 1024px) {
-
+@media only screen and (max-width: 620px) {
+  .home .hero quote h2, .home .main-quote h3 {
+    padding-right: 20vw;
+  }
+  .home .good-deals .banner figure .call-out h3 {
+    padding-right: 20vw;
+  }
+  .home .good-vibes h3 {
+    padding-right: 20vw;
+  }
+  .home .good-press h3 {
+    padding-right: 20vw;
+  }
+  .home .good-vibes .vibes .vibe {
+    width: 44%;
+  }
+  .home .good-press .articles .article {
+    width: 50%;
+  }
+  .home .good-press .articles .article a figure {
+    height: 18vw;
+  }
+  .home .modal-content .panel {
+    border-radius: 0px;
+  }
+  .home .good-deals .banner {
+    padding: 0px;
+  }
+  .home .good-deals .banner figure {
+    border-radius: 0px;
+  }
+  .home .goods-and-services .services {
+    padding: 0 2vw;
+  }
+  footer .flexer .flex.quote {
+    flex: none;
+    width: 100%;
+  }
+  footer .flexer .flex {
+    flex: none;
+    width: 50%;
+  }
+  .about h1 {
+    padding-right: 10vw;
+  }
+  .about .flexer .flexed.flag-logo {
+    flex: none;
+    width: 100%;
+  }
+  .about .flexer .flexed.flag-logo {
+    flex: none;
+    width: 100%;
+  }
+  .about .good-values {
+    padding-right: 20vw;
+  }
+  .about .flexer.values {
+    padding: 0 4vw;
+  }
+  .about .flexer.values .flexed {
+    width: 50%;
+  }
+  .about .flexer .flexed.molly {
+    flex: none;
+    width: 100%;
+    padding-right: 50vw;
+  }
+  .about .flexer .flexed.bio {
+    flex: none;
+    width: 100%;
+  }
+  .contact main h2, .contact main h3 {
+    padding-right: 20vw;
+  }
 }
 
 ::selection {
