@@ -5,16 +5,14 @@
 		var $lastScrollTop, $scrollTop, $current;
 
 		$(document).ready(function() {
+
+		});
+
+		$(window).load(function() {
 			setBackground();
 			init();
 			animate();
-			if($("#site-content-wrap").hasClass("home")) {
-				setTimeout(function(){
-					reveal();
-				}, 860);
-			} else {
-				reveal();
-			}
+			reveal();
 		});
 
 		var init = function() {
@@ -62,7 +60,7 @@
 					if($("#site-content-wrap").hasClass("home")) {
 						setTimeout(function(){
 							reveal();
-						}, 860);
+						}, 1200);
 					} else {
 						setTimeout(function(){
 							reveal();
@@ -74,6 +72,33 @@
 			$smoothState = $('#page').smoothState(options).data('smoothState');
 			$lastScrollTop = $scrollTop = $(document).scrollTop();
 			$current = "show";
+
+			var flky = new Flickity( '.flky', {
+				accessibility: true,
+				adaptiveHeight: false,
+				autoPlay: false,
+				cellAlign: 'center',
+				cellSelector: undefined,
+				contain: false,
+				draggable: true,
+				dragThreshold: 3,
+				freeScroll: false,
+				selectedAttraction: 0.1,
+				friction: 1,
+				groupCells: false,
+				initialIndex: 2,
+				lazyLoad: false,
+				percentPosition: true,
+				prevNextButtons: false,
+				pageDots: true,
+				resize: true,
+				rightToLeft: false,
+				setGallerySize: true,
+				watchCSS: false,
+				wrapAround: true
+			});
+
+			AOS.init();
 		};
 
 		var setBackground = function() {
@@ -146,10 +171,10 @@
 			var direction;
 			if($lastScrollTop < $scrollTop && $scrollTop > 0){
 				direction = "down";
-				console.log(direction);
+				// console.log(direction);
 			} else if($lastScrollTop > $scrollTop && $scrollTop > 0) {
 				direction = "up";
-				console.log(direction);
+				// console.log(direction);
 			} else {
 				direction = null;
 			}

@@ -256,8 +256,9 @@ body {
 
   &[data-background=about] {
     #page {
+      background: $black;
+
       main {
-        background: $black;
         color: $grey;
 
         a {
@@ -273,8 +274,19 @@ body {
 
   &[data-background=contact] {
     #page {
+      background: $grey;
+
+      .header {
+        a {
+          color: $white!important;
+
+          &:hover {
+            color: $white!important;
+          }
+        }
+      }
+
       main {
-        background: $grey;
         color: $white;
 
         a {
@@ -431,7 +443,7 @@ button {
     transform: translate3d(0%, -100%, 0);
     backface-visibility: hidden;
     opacity: 0;
-    transition: transform 660ms cubic-bezier(.86,0,.07,1), opacity 660ms cubic-bezier(.86,0,.07,1);
+    transition: transform 1200ms ease, opacity 1200ms ease;
     z-index: 110;
     margin: 4vw;
 
@@ -455,7 +467,7 @@ button {
     transform: translate3d(0, -100%, 0);
     backface-visibility: hidden;
     opacity: 0;
-    transition: transform 660ms cubic-bezier(.86,0,.07,1), opacity 660ms cubic-bezier(.86,0,.07,1);
+    transition: transform 1200ms ease, opacity 1200ms ease;
     z-index: 110;
     line-height: 1;
     margin: 4vw;
@@ -498,7 +510,7 @@ main {
   text-align: right;
   opacity: 0;
   backface-visibility: hidden;
-  transition: transform 660ms cubic-bezier(.86,0,.07,1), opacity 660ms cubic-bezier(.86,0,.07,1);
+  transition: transform 1200ms ease, opacity 1200ms ease;
   transform: translate3d(0, 100%, 0);
   line-height: 1;
   z-index: 100;
@@ -571,6 +583,8 @@ main {
         position: relative;
         border-radius: 6px;
         overflow: hidden;
+        background: $grey-light;
+        z-index: 10;
 
         img {
           width: 100%;
@@ -638,20 +652,27 @@ main {
   }
 
   .good-vibes {
+    position: relative;
+    z-index: 100;
+
     h3 {
       padding-right: 40vw;
       padding-top: 0px;
       padding-bottom: 0px;
     }
 
+    .flickity-page-dots {
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -2vw;
+    }
+
     .vibes {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 3vw 9vw;
-      padding-bottom: 0px;
+      padding-top: 3vw;
 
       .vibe {
-        width: 33.33%;
+        width: 26%;
         padding: 1vw;
         padding-bottom: 0px;
 
@@ -750,6 +771,53 @@ main {
           }
         }
       }
+    }
+  }
+}
+
+.about {
+  footer{
+    display: none;
+  }
+}
+
+.contact {
+
+  footer {
+    display: none;
+  }
+
+  .ul {
+
+    a {
+      border-bottom: 1px solid $white;
+      display: inline-block;
+    }
+
+    &.social {
+
+      a {
+        width: 160px;
+        margin-top: 1vw;
+      }
+    }
+  }
+
+  main {
+    padding: 30vh 0;
+
+    h2{
+      padding-right: 50vw;
+    }
+
+    h3 {
+      padding-right: 50vw;
+      font-size: 1.3em;
+      padding-top: 0px;
+    }
+
+    p, ul {
+      padding-top: 0px;
     }
   }
 }

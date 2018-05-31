@@ -1,6 +1,6 @@
 
 				<footer>
-					<section class="flexer">
+					<section class="flexer" data-aos="fade-in" data-aos-offset="80" data-aos-easing="ease" data-aos-duration="1200">
 						<div class="flex quote">
 							<small>John Lennon</small>
 							<h3>Being honest may not get you a lot of friends but it’ll always get you the right ones.</h3>

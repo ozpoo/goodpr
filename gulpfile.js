@@ -14,7 +14,7 @@ gulp.task('js', function () {
 		watchJS = false;
 
 		var libStream = gulp.src([
-				'assets/font/Font Awesome/svg-with-js/js/fontawesome-all.min.js',
+				// 'assets/font/Font Awesome/svg-with-js/js/fontawesome-all.min.js',
 				'assets/js/_lib/smoothstate/smoothstate.min.js',
 				'assets/js/_lib/lettering/jquery.lettering.js',
 				'assets/js/_lib/textillate/jquery.textillate.js',
@@ -22,6 +22,9 @@ gulp.task('js', function () {
 				'assets/js/_lib/greensock-easing/minified/TweenMax.min.js',
 				'assets/js/_lib/greensock-easing/minified/easing/CustomEase.min.js',
 				'assets/js/_lib/lazysizes/lazysizes.min.js',
+				// 'assets/js/_lib/lazysizes/js-cookie/js.cookie.js',
+				'assets/js/_lib/flickity/flickity.pkgd.min.js',
+				// 'assets/js/_lib/lazysizes/tinycolor2/dist/tinycolor-min.js',
 				'assets/js/src/script.js'
 			])
 			.pipe(concat('script.js'))

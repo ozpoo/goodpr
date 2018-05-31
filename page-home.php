@@ -5,7 +5,7 @@
 		<section class="hero">
 			<figure>
 				<?php $thumb = get_post_thumbnail_id(); ?>
-				<img
+				<img data-aos="fade-in" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="800"
 					alt=""
 					src="<?php echo wp_get_attachment_image_src($thumb, 's01')[0]; ?>"
 					sizes="auto"
@@ -13,7 +13,7 @@
 					class="lazyload" />
 			</figure>
 			<quote>
-				<h2>
+				<h2 data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="1600">
 					We draw visibility to big ideas and the inspiring people who create them.
 				</h2>
 			</quote>
@@ -21,25 +21,25 @@
 
 		<section class="main-quote">
 			<quote>
-				<h3>
+				<h3 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">
 					You could have the best business idea in the world, but if no one knows about it, unless you are the rare exception to the rule, you won’t be very successful.
 				</h3>
 			</quote>
 		</section>
 
 		<section class="good-deals">
-			<h1>Good Deals</h1>
+			<h1 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">Good Deals</h1>
 			<div class="banner">
 				<figure>
 					<?php $thumb = get_field("good_deals_banner"); ?>
-					<img
+					<img data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="800"
 						alt=""
 						src="<?php echo wp_get_attachment_image_src($thumb, 's01')[0]; ?>"
 						sizes="auto"
 						data-srcset="<?php echo wp_get_attachment_image_srcset($thumb, 's02'); ?>"
 						class="lazyload" />
 						<div class="call-out">
-							<h3>To celebrate the launch of Good PR Co. we are offering a limited time starter package.</h3>
+							<h3 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">To celebrate the launch of Good PR Co. we are offering a limited time starter package.</h3>
 						</div>
 						<div class="cta">
 							<p><button>Details</button></p>
@@ -49,10 +49,10 @@
 		</section>
 
 		<section class="goods-and-services">
-			<h1>Goods &amp; Services</h1>
+			<h1 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">Goods &amp; Services</h1>
 
 			<div class="services">
-				<div class="service">
+				<div class="service" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
 					<div class="illustration">
 						<svg version="1.1"
 							 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -102,7 +102,7 @@
 					</div>
 				</div>
 
-				<div class="service">
+				<div class="service" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="400">
 					<div class="illustration">
 						<svg version="1.1"
 							 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -146,7 +146,7 @@
 					</div>
 				</div>
 
-				<div class="service">
+				<div class="service" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="800">
 					<div class="illustration">
 						<svg version="1.1"
 						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -208,15 +208,16 @@
 		</section>
 
 		<section class="good-vibes">
-			<h1>Good Vibes</h1>
-			<h3>The following content is meant to inform and inspire women who hustle and dream big.</h3>
+			<h1 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">Good Vibes</h1>
+			<h3 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">The following content is meant to inform and inspire women who hustle and dream big.</h3>
 
-			<section class="vibes">
+			<section class="vibes flky">
 				<?php
+				$count = 0;
 				$temp = $wp_query; $wp_query= null;
-				$wp_query = new WP_Query(); $wp_query->query('posts_per_page=3&post_type=good_vibes');
+				$wp_query = new WP_Query(); $wp_query->query('posts_per_page=-1&post_type=good_vibes');
 				while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-				<article class="vibe">
+				<article class="vibe" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="<?php echo $count++ * 200; ?>">
 					<a href="<?php the_permalink(); ?>">
 						<figure>
 							<?php $thumb = get_post_thumbnail_id(); ?>
@@ -241,16 +242,17 @@
 		</section>
 
 		<section class="good-press">
-			<h1>Good Press</h1>
-			<h3>A few published words of encouragement and opinions from Molly.</h3>
+			<h1 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">Good Press</h1>
+			<h3 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">A few published words of encouragement and opinions from Molly.</h3>
 
 			<section class="articles">
 				<?php
+				$count = 0;
 				$temp = $wp_query; $wp_query= null;
 				$wp_query = new WP_Query(); $wp_query->query('posts_per_page=4&post_type=good_press');
 				while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-				<article class="article">
-					<a href="<?php the_permalink(); ?>">
+				<article class="article" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="<?php echo $count++ * 200; ?>">
+					<a href="<?php echo get_field("url"); ?>" target="_blank">
 						<figure>
 							<?php $thumb = get_post_thumbnail_id(); ?>
 							<img
