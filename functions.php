@@ -19,7 +19,7 @@ if (function_exists('add_theme_support')) {
     add_image_size('s04',   800, '', true);
     add_image_size('s03',   640, '', true);
     add_image_size('s02',   480, '', true);
-    add_image_size('s01',   10, '', true);
+    add_image_size('s01',   120, '', true);
 
     add_image_size('h08',   '', 360, true);
     add_image_size('h07',   '', 320, true);

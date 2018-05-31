@@ -73,32 +73,23 @@
 			$lastScrollTop = $scrollTop = $(document).scrollTop();
 			$current = "show";
 
-			var flky = new Flickity( '.flky', {
-				accessibility: true,
-				adaptiveHeight: false,
-				autoPlay: false,
-				cellAlign: 'center',
-				cellSelector: undefined,
-				contain: false,
-				draggable: true,
-				dragThreshold: 3,
-				freeScroll: false,
-				selectedAttraction: 0.1,
-				friction: 1,
-				groupCells: false,
-				initialIndex: 2,
-				lazyLoad: false,
-				percentPosition: true,
-				prevNextButtons: false,
-				pageDots: true,
-				resize: true,
-				rightToLeft: false,
-				setGallerySize: true,
-				watchCSS: false,
-				wrapAround: true
+			AOS.init();
+
+			$(".promotion .close button").on("click", function(){
+				$(".promotion").removeClass("show");
 			});
 
-			AOS.init();
+			// if (!CSS.supports('backdrop-filter', 'blur(4px)') && !CSS.supports('-webkit-backdrop-filter', 'blur(4px)')) {
+		  //   $('[data-target="#myModal"]').click(function () {
+		  //       html2canvas(document.body).then(function (canvas) {
+		  //           $('.promotion').css({
+		  //               "background-image": 'url(' + canvas.toDataURL("image/png") + ')',
+		  //               "filter": "blur(4px)",
+		  //               "opacity": "1"
+		  //           });
+		  //       });
+		  //   });
+			// }
 		};
 
 		var setBackground = function() {
@@ -118,6 +109,9 @@
 			setTimeout(function(){
 				$(".logo, .menu, .back").addClass("show");
 			}, 660);
+			setTimeout(function(){
+				$(".promotion").addClass("show");
+			}, 0);
 		};
 
 		var hide = function() {

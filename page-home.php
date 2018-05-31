@@ -31,7 +31,10 @@
 			<h1 data-aos="fade-in" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200">Good Deals</h1>
 			<div class="banner">
 				<figure>
-					<?php $thumb = get_field("good_deals_banner"); ?>
+					<?php
+						$page = get_page_by_path('starter-package');
+						$thumb = get_post_thumbnail_id($page->ID);
+					?>
 					<img data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="800"
 						alt=""
 						src="<?php echo wp_get_attachment_image_src($thumb, 's01')[0]; ?>"
@@ -82,7 +85,7 @@
 						</svg>
 					</div>
 					<div class="slider">
-						<div class="about">
+						<div class="description">
 							<p>
 								Content Creation<br>
 								<span class="set-back">Translate and clearly articulate WHY you do what you do in a way that is easy for your audience to understand.</span></p>
@@ -126,7 +129,7 @@
 						</svg>
 					</div>
 					<div class="slider">
-						<div class="about">
+						<div class="description">
 							<p>
 								Strategic Counsel<br>
 								<span class="set-back">Partner and advise you through the complex and sometimes ambiguous world of public relations.</span></p>
@@ -185,7 +188,7 @@
 						</svg>
 					</div>
 					<div class="slider">
-						<div class="about">
+						<div class="description">
 							<p>
 								Media Strategy<br>
 								<span class="set-back">Develop strategies through leveraging media to  get your big ideas seen and heard!</span></p>
@@ -286,7 +289,30 @@
 			});
 
 			var init = function() {
-
+				var flky = new Flickity( '.flky', {
+					accessibility: true,
+					adaptiveHeight: false,
+					autoPlay: false,
+					cellAlign: 'center',
+					cellSelector: undefined,
+					contain: false,
+					draggable: true,
+					dragThreshold: 3,
+					freeScroll: false,
+					selectedAttraction: 0.1,
+					friction: 1,
+					groupCells: false,
+					initialIndex: 2,
+					lazyLoad: false,
+					percentPosition: true,
+					prevNextButtons: false,
+					pageDots: true,
+					resize: true,
+					rightToLeft: false,
+					setGallerySize: true,
+					watchCSS: false,
+					wrapAround: true
+				});
 			};
 
 			var showList = function() {
