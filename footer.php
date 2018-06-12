@@ -14,7 +14,7 @@
 								<li><a href="https://www.facebook.com/goodprco/" target="_blank">Facebook</a></li>
 								<li><a href="https://twitter.com/goodprco/" target="_blank">Twitter</a></li>
 								<li><a href="https://www.instagram.com/goodprco/" target="_blank">Instagram</a></li>
-								<li><a href="https://www.linkedin.com/goodprco/" target="_blank">LinkedIn</a></li>
+								<li><a href="https://www.linkedin.com/company/goodprco/" target="_blank">LinkedIn</a></li>
 							</ul>
 						</div>
 						<div class="flex">

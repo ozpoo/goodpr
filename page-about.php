@@ -62,7 +62,7 @@
 						Empathy
 					</p>
 					<p>
-						<span class="set-back quote">“People will forget what you said, peoplezwill forget what you did, but people will never forget how you made them feel.” — Maya Angelou</span>
+						<span class="set-back quote">“People will forget what you said, people will forget what you did, but people will never forget how you made them feel.” — Maya Angelou</span>
 					</p>
 					<p>
 						<span class="set-back">We want to leave people we interact with feeling understood, inspired and encouraged to pursue their dreams.</span>
@@ -110,7 +110,7 @@
 						Humor
 					</p>
 					<p>
-						<span class="set-back">From there to here, and here to there, funny things are everywhere.” — Dr. Seuss</span>
+						<span class="set-back quote">"From there to here, and here to there, funny things are everywhere.” — Dr. Seuss</span>
 					</p>
 					<p>
 						<span class="set-back">It's impossible to survive the world of PR, let alone life without comedic relief. We believe that life is funny. We hope you do too.</span>

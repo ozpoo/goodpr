@@ -45,11 +45,13 @@
 				onProgress: {
 			    duration: 0,
 			    render: function ($container) {
+						$(".loader").addClass("show");
 					}
 			  },
 				onReady: {
 			    duration: 0,
 			    render: function($container, $newContent) {
+						$(".loader").removeClass("show");
 						if($(".flky").length) {
 							$flky.flickity('destroy');
 							console.log("destroy");
@@ -219,7 +221,7 @@
 					selectedAttraction: 0.1,
 					friction: 1,
 					groupCells: false,
-					initialIndex: 2,
+					initialIndex: 0,
 					lazyLoad: false,
 					percentPosition: true,
 					prevNextButtons: false,
