@@ -44,85 +44,42 @@
 				</div>
 				<div class="flexed about-text" data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="200">
 					<p>
-						About the Good PR Co.<br>
-						<span class="set-back">The Good PR Co. is a mission driven company, hell bent on elevating grandiose thinkers and female leaders. We specialize in curating personal, fine-tuned media strategies centered on businesses’ and their owners’ unique stories. Above all, we are focused on empowering people with big ideas that are all to use to being told they are crazy or impractical. We look to partner with those who refuse to fit the mold, are obsessively passionate, inconveniently driven, smart visionaries. We are committed to helping “big-idear-ers” clearly define their brand, articulate what they stand for and share their purpose with the right audiences.</span>
+						<?php echo get_field("about")["title"]; ?><br>
+						<span class="set-back"><?php echo get_field("about")["description"]; ?></span>
 					</p>
 				</div>
 			</div>
 
 			<p class="good-values" data-aos="fade-in" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200">
 				Good Values<br>
-				<span class="set-back">At the Good PR Co. we help and encourage others to pursue dreams, we lead with integrity and honesty and keep our values at the center of all we do.</span>
+				<span class="set-back"><?php echo get_field("good_values")["description"]; ?></span>
 			</p>
 
-			<div class="flexer values">
-				<div class="flexed" data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
-					<p>
-						<span class="number">01</span>
-						Empathy
-					</p>
-					<p>
-						<span class="set-back quote">“People will forget what you said, people will forget what you did, but people will never forget how you made them feel.” — Maya Angelou</span>
-					</p>
-					<p>
-						<span class="set-back">We want to leave people we interact with feeling understood, inspired and encouraged to pursue their dreams.</span>
-					</p>
-				</div>
-				<div class="flexed" data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="200">
-					<p>
-						<span class="number">02</span>
-						Direct
-					</p>
-					<p>
-						<span class="set-back quote">“Well-behaved women seldom make history.” — Laurel Thatcher Ulrich</span>
-					</p>
-					<p>
-						<span class="set-back">We believe sugarcoating things, is a disservice to our clients. As communication pros, we believe openness, honesty and getting to the crux of the matter is the most efficient way to work and live.</span>
-					</p>
-				</div>
-				<div class="flexed" data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="400">
-					<p>
-						<span class="number">03</span>
-						Authenticity
-					</p>
-					<p>
-						<span class="set-back quote">“Be yourself, everyone else is already taken.” — Oscar Wilde</span>
-					</p>
-					<p>
-						<span class="set-back">Caution: There may be swear words and sarcasm along the way, and sometimes singing aloud because we bring our real selves to work and appreciate and encourage people’s differences and idiosyncrasies.</span>
-					</p>
-				</div>
-				<div class="flexed" data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
-					<p>
-						<span class="number">04</span>
-						Courage
-					</p>
-					<p>
-						<span class="set-back quote">“It always seems impossible until it’s done.” — Nelson Mandela</span>
-					</p>
-					<p>
-						<span class="set-back">We are drawn to bold people who see the world differently and take action. We allow courage to drive our decisions, rather than fear.</span>
-					</p>
-				</div>
-				<div class="flexed" data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="200">
-					<p>
-						<span class="number quote">05</span>
-						Humor
-					</p>
-					<p>
-						<span class="set-back quote">"From there to here, and here to there, funny things are everywhere.” — Dr. Seuss</span>
-					</p>
-					<p>
-						<span class="set-back">It's impossible to survive the world of PR, let alone life without comedic relief. We believe that life is funny. We hope you do too.</span>
-					</p>
-				</div>
-			</div>
+			<section class="flexer values">
+				<?php $count = 0; ?>
+				<?php while ( have_rows('good_values') ) : the_row(); ?>
+					<?php while ( have_rows('values') ) : the_row(); ?>
+						<div class="flexed" data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="<?php echo $count++ * 200; ?>">
+							<p>
+								<span class="number">0<?php echo $count; ?></span>
+								<?php echo the_sub_field('title'); ?>
+							</p>
+							<p>
+								<span class="set-back quote">“<?php echo the_sub_field('quote'); ?>” &mdash; <?php echo the_sub_field('author'); ?></span>
+							</p>
+							<p>
+								<span class="set-back"><?php echo the_sub_field('description'); ?></span>
+							</p>
+						</div>
+					<?php endwhile; ?>
+				<?php endwhile; ?>
+			</section>
 
 			<div class="flexer mollz">
 				<div class="flexed molly">
 					<figure>
 						<p>
-							<?php $thumb = get_post_thumbnail_id(); ?>
+							<?php $thumb = get_field("bio")["image"]; ?>
 							<img data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200"
 								alt=""
 								src="<?php echo wp_get_attachment_image_src($thumb, 's01')[0]; ?>"
@@ -134,8 +91,8 @@
 				</div>
 				<div class="flexed bio">
 					<p data-aos="fade-up" data-aos-offset="0" data-aos-easing="ease" data-aos-duration="1200">
-						Molly Smith, CEO and Founder<br>
-						<span class="set-back">After the better part of ten years working internally or as client counsel for Fortune 500 tech companies, startups and small businesses, Molly said goodbye to cushy corporate life and propelled head first into her vision of bringing a friendly and personal “Good PR” company to fruition. Although Molly was born and raised in the mean suburbs of beautiful Edmonds, Washington, after a three year stint practicing PR in Manhattan proper, she identifies as half New-Yorker and half Seattleite. She loves a good pun. She is a writer. A mentor. And a Washington State University, Edward R. Murrow School of Communications Alumna.</span>
+						<?php echo get_field("bio")["title"]; ?><br>
+						<span class="set-back"><?php echo get_field("bio")["description"]; ?></span>
 					</p>
 				</div>
 			</div>
