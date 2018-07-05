@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
 	<main role="main">
-		<section class="coming-soon">
-			<h1>Good Vibes Coming Soon!</h1>
-		</section>
+		<?php get_template_part('loop-good_vibes'); ?>
 	</main>
 
 <?php get_footer(); ?>

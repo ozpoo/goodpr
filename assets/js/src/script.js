@@ -96,7 +96,7 @@
 				$("body").attr("data-background", "about");
 			} else if($("#site-content-wrap").hasClass("contact")) {
 				$("body").attr("data-background", "contact");
-			} else if($("#site-content-wrap").hasClass("post-type-archive-good_vibes")) {
+			} else if($("#site-content-wrap").hasClass("post-type-archive-good_vibes") || $("#site-content-wrap").hasClass("single-good_vibes")) {
 				$("body").attr("data-background", "good-vibes");
 			} else if($("#site-content-wrap").hasClass("post-type-archive-good_press")) {
 				$("body").attr("data-background", "good-press");

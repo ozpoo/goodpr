@@ -24,7 +24,6 @@
 								<li><a href="<?php echo site_url( '/about', 'http' ); ?>">About</li>
 								<li><a href="<?php echo site_url( '/contact', 'http' ); ?>">Contact</li>
 								<li><a href="<?php echo site_url( '/good-vibes', 'http' ); ?>">Good Vibes</li>
-									<li><a href="<?php echo site_url( '/good-press', 'http' ); ?>">Good Press</li>
 							</ul>
 						</div>
 					</section>

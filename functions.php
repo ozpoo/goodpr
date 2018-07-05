@@ -134,7 +134,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '') {
 
 function view_article($more) {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '...<br><a class="read-more toggle" href="' . get_permalink($post->ID) . '">Read More</a>';
 }
 
 function remove_admin_bar() {

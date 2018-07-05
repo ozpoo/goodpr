@@ -310,29 +310,39 @@ body {
 
   &[data-background=good-vibes] {
     #page {
-      background: $teal;
+      background: $white;
+      color: $grey;
 
-      .header {
-        a {
-          color: $white!important;
+      a {
+        color: $grey;
 
-          &:hover {
-            color: $white!important;
-          }
+        &:hover {
+          color: $grey;
         }
       }
+    }
 
-      main {
-        color: $white;
+    .st0 {
+      fill: $grey;
+    }
+  }
 
-        a {
-          color: $white;
+  &[data-background=good-vibes] {
+    #page {
+      background: $white;
+      color: $grey;
 
-          &:hover {
-            color: $white;
-          }
+      a {
+        color: $grey;
+
+        &:hover {
+          color: $grey;
         }
       }
+    }
+
+    .st0 {
+      fill: $grey;
     }
   }
 
@@ -1286,20 +1296,113 @@ main {
 
 .post-type-archive-good_vibes {
 
-  footer {
-    display: none;
-  }
+  main {
+    padding-top: 24vh;
+    padding-left: 8vw;
+    padding-right: 8vw;
 
-  h1 {
-    padding: 0px;
-    color: white;
-  }
+    .vibe {
+      padding-bottom: 8vw;
 
-  .coming-soon {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      figure {
+        margin-right: 50%;
+        margin-left: 4vw;
+
+        img {
+          border-radius: 6px;
+        }
+      }
+
+      .description {
+        display: flex;
+        flex-wrap: wrap;
+
+        .left {
+          flex: 2;
+        }
+
+        .right {
+          flex: 3;
+          padding-top: 2vw;
+
+          p {
+            font-size: 1.2em;
+            padding-bottom: 0px;
+            padding-top: 2vw;
+          }
+
+          a {
+            border-bottom: 1px solid $grey;
+
+            &.read-more {
+              border-radius: 20px;
+              padding: .4vw 2vw;
+              display: inline-block;
+              border: 1px solid #c0c2c0;
+              color: #c0c2c0!important;
+              font-size: .9em;
+              margin-top: 2vw;
+            }
+          }
+        }
+      }
+
+      .vibe-content {
+        display: none;
+      }
+    }
+  }
+}
+
+.single {
+
+  main {
+
+    .hero {
+      padding: 8vw;
+      padding-right: 30vw;
+      padding-bottom: 4vw;
+      padding-left: 12vw;
+    }
+
+    a {
+      display: inline-block;
+      border-bottom: 1px solid $grey;
+    }
+
+    h2, h3, p {
+      padding-bottom: 0px;
+      padding-top: 2vw;
+    }
+
+    h1 {
+      padding-top: 0px;
+    }
+
+    .content {
+      padding-bottom: 12vh;
+    }
+
+    .flexer {
+      display: flex;
+      flex-wrap: wrap;
+
+      .flexed {
+
+        &.email {
+          flex: 4;
+
+          p {
+            padding-top: 0px;
+          }
+        }
+
+        &.copy {
+          flex: 6;
+          padding-right: 4vw;
+        }
+      }
+    }
   }
 }
 
@@ -1436,6 +1539,109 @@ footer {
   }
   .contact main h2, .contact main h3 {
     padding-right: 20vw;
+  }
+  .post-type-archive-good_vibes {
+
+    main {
+      padding-top: 24vh;
+      padding-left: 8vw;
+      padding-right: 8vw;
+
+      .vibe {
+
+        figure {
+          margin-right: 10%;
+          margin-left: 4vw;
+
+          img {
+            border-radius: 6px;
+          }
+        }
+
+        .description {
+
+          .left {
+            flex: auto;
+            width: 100%;
+          }
+
+          .right {
+            flex: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .single {
+
+    main {
+      padding-left: 4vw;
+      padding-right: 4vw;
+
+      .hero {
+        padding-top: 12vw;
+        padding-right: 4vw;
+        padding-bottom: 8vw;
+        padding-left: 4vw;
+      }
+
+      .flexer {
+
+        .flexed {
+
+          &.email {
+            flex: auto;
+            width: 100%;
+
+            p {
+              padding-bottom: 4vw;
+            }
+          }
+
+          &.copy {
+            flex: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .starter-package {
+
+    main {
+      padding-left: 4vw;
+      padding-right: 4vw;
+
+      .hero {
+        padding-top: 12vw;
+        padding-right: 4vw;
+        padding-bottom: 8vw;
+        padding-left: 4vw;
+      }
+
+      .flexer {
+
+        .flexed {
+
+          &.email {
+            flex: auto;
+            width: 100%;
+
+            p {
+              padding-bottom: 4vw;
+            }
+          }
+
+          &.copy {
+            flex: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 

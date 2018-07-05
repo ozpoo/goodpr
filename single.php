@@ -1,14 +1,31 @@
 <?php get_header(); ?>
 
+<?php if (have_posts()): ?>
+<?php while (have_posts()) : the_post(); ?>
+
 	<main role="main">
 
-		<section class="container">
-
-		<?php while (have_posts()) : the_post(); ?>
-			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<?php the_content(); ?>
-		<?php endwhile; ?>
-
+		<section class="hero">
+			<figure>
+				<?php $thumb = get_post_thumbnail_id(); ?>
+				<img data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="200"
+					alt=""
+					src="<?php echo wp_get_attachment_image_src($thumb, 's01')[0]; ?>"
+					sizes="auto"
+					data-srcset="<?php echo wp_get_attachment_image_srcset($thumb, 's02'); ?>"
+					class="lazyload" />
+			</figure>
+		</section>
+		<section class="content">
+			<div class="flexer" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="600">
+				<div class="flexed email">
+					<p><?php the_date(); ?></p>
+				</div>
+				<div class="flexed copy">
+					<h1><?php the_title(); ?></h1>
+					<?php the_content(); ?>
+				</div>
+			</div>
 		</section>
 
 		<script>
@@ -72,5 +89,8 @@
 		</script>
 
 	</main>
+
+<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
