@@ -2,7 +2,7 @@
 
 	$(function () {
 
-		var $lastScrollTop, $scrollTop, $current, $flky;
+		var $lastScrollTop, $scrollTop, $current, $flky, $slider;
 
 		$(document).ready(function() {
 
@@ -112,12 +112,12 @@
 			setTimeout(function(){
 				$(".logo, .menu, .back").addClass("show");
 			}, 660);
-			if(!Cookies.get('gpr-promo')){
-				setTimeout(function(){
-					$(".promotion").addClass("show");
-					Cookies.set('gpr-promo', 'nailed-it', { expires: 7 });
-				}, 8000);
-			}
+			// if(!Cookies.get('gpr-promo')){
+			// 	setTimeout(function(){
+			// 		$(".promotion").addClass("show");
+			// 		Cookies.set('gpr-promo', 'nailed-it', { expires: 7 });
+			// 	}, 8000);
+			// }
 		};
 
 		var hide = function() {
@@ -231,6 +231,21 @@
 					setGallerySize: true,
 					watchCSS: false,
 					wrapAround: true
+				});
+			}
+
+			if($(".slider").length) {
+				$slider = $('.slider').slick({
+				  dots: false,
+					slidesToShow: 1,
+				  slidesToScroll: 1,
+				  infinite: true,
+					autoplay: true,
+				  autoplaySpeed: 4200,
+					arrows: false,
+				  speed: 1200,
+				  fade: true,
+				  cssEase: 'linear'
 				});
 			}
 			AOS.init();

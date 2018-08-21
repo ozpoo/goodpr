@@ -755,14 +755,22 @@ main {
 
   .hero {
     position: relative;
-    height: 100vh;
-    min-height: 420px;
     background: $coral;
     color: $white;
 
+    .slider {
+      pointer-events: none;
+      height: 100vh;
+      min-height: 420px;
+
+      .slick-list, .slick-track, div {
+        height: 100%;
+      }
+    }
+
     figure {
-      height: 100%;
-      width: 100%;
+      height: 100vh;
+      width: 100vw;
       position: relative;
       z-index: 0;
 
@@ -779,8 +787,13 @@ main {
       left: 0;
       z-index: 10;
 
-      h2 {
+      h1 {
+        font-size: 2em;
+        line-height: 1.12;
+        font-weight: 300;
         padding-right: 40vw;
+        color: white;
+        font-family: inherit;
       }
     }
   }
@@ -846,7 +859,8 @@ main {
       padding: 0 9vw;
 
       .service {
-        flex: 1;
+        // flex: 1;
+        width: 33.33%;
 
         p {
           padding: 2vw 1vw;
@@ -1467,6 +1481,20 @@ footer {
 }
 
 @media only screen and (max-width: 620px) {
+  .home .goods-and-services .services .service {
+    width: 100%;
+    padding: 2vw 0;
+  }
+  .home .goods-and-services .services .service .illustration svg {
+    height: auto;
+    width: 20vw;
+  }
+  .home .goods-and-services .services .service .illustration {
+    text-align: left;
+  }
+  .home .goods-and-services .services .service p {
+    padding-right: 30vw
+  }
   .home .hero quote h2, .home .main-quote h3 {
     padding-right: 20vw;
   }
@@ -1498,7 +1526,7 @@ footer {
     border-radius: 0px;
   }
   .home .goods-and-services .services {
-    padding: 0 2vw;
+    padding: 0 4vw;
   }
   footer .flexer .flex.quote {
     flex: none;

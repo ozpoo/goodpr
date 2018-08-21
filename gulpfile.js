@@ -25,6 +25,7 @@ gulp.task('js', function () {
 				'assets/js/_lib/html2canvas/html2canvas.min.js',
 				'assets/js/_lib/js-cookie/js.cookie.js',
 				'assets/js/_lib/flickity/flickity.pkgd.min.js',
+				'assets/js/_lib/slick/slick.js',
 				// 'assets/js/_lib/tinycolor2/dist/tinycolor-min.js',
 				'assets/js/src/script.js'
 			])

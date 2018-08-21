@@ -63,6 +63,11 @@ function styles() {
     array(), '1.0', 'all');
   wp_enqueue_style('flky');
 
+  wp_register_style('slick',
+    get_template_directory_uri() . '/assets/js/_lib/slick/slick.css?v='.time(),
+    array(), '1.0', 'all');
+  wp_enqueue_style('slick');
+
   wp_register_style('style',
     get_template_directory_uri() . '/assets/css/build/style.css?v='.time(),
     array(), '1.0', 'all');
